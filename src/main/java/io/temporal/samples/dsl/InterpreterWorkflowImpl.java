@@ -40,10 +40,10 @@ public class InterpreterWorkflowImpl implements InterpreterWorkflow {
 
   @Override
   public String execute(String workflowType, String input) {
-
-    currentActivity = interpreter.getNextStep(workflowType, currentActivity);
-    lastActivityResult = activities.execute(currentActivity, String.class, lastActivityResult);
-    //          activities.execute("Interpreter_print", String.class, lastActivityResult);
+    do {
+      currentActivity = interpreter.getNextStep(workflowType, currentActivity);
+      lastActivityResult = activities.execute(currentActivity, String.class, lastActivityResult);
+    } while (currentActivity != null);
     return lastActivityResult;
   }
 
