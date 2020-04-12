@@ -67,10 +67,10 @@ public class InterpreterWorker {
     Map<String, String> definition1 = new HashMap<>();
     List<String> sequence =
         Arrays.asList(
-            "Interpreter_print"
-            //            "Activities::activity2",
-            //            "Activities::activity3",
-            //            "Activities::activity4"
+            "Activities::activity1",
+            "Activities::activity2",
+            "Activities::activity3",
+            "Activities::activity4"
             );
     definition1.put("init", sequence.get(0));
 

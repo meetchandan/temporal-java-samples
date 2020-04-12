@@ -40,10 +40,4 @@ public class SequenceInterpreter implements Interpreter {
     System.out.println("stateTransitions.get(lastActivity)" + stateTransitions.get(lastActivity));
     return stateTransitions.get(lastActivity);
   }
-
-  @Override
-  public String print(String strToPrint) {
-    System.out.println("Activity Executed Print: " + strToPrint);
-    return strToPrint;
-  }
 }

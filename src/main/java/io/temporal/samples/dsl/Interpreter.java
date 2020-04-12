@@ -26,7 +26,4 @@ import io.temporal.activity.ActivityMethod;
 public interface Interpreter {
   @ActivityMethod
   String getNextStep(String workflowType, String lastActivity);
-
-  @ActivityMethod
-  String print(String strToPrint);
 }

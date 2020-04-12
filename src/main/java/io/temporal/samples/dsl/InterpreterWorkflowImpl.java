@@ -42,7 +42,7 @@ public class InterpreterWorkflowImpl implements InterpreterWorkflow {
   public String execute(String workflowType, String input) {
 
     currentActivity = interpreter.getNextStep(workflowType, currentActivity);
-    lastActivityResult = activities.execute("Interpreter_print", String.class, "Chandan");
+    lastActivityResult = activities.execute(currentActivity, String.class, lastActivityResult);
     //          activities.execute("Interpreter_print", String.class, lastActivityResult);
     return lastActivityResult;
   }
